@@ -5,6 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :districts
+  has_many :orders
+
+  def user_reser
+    name + ' ' + lastname
+  end
 
   def passenger?
     self.role == 'passenger'    

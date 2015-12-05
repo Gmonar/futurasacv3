@@ -1,74 +1,42 @@
+  <br>
+<br>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @order.user %>
+  <strong>Pasajero:</strong>
+  <%= @order.user.user_reser %>
 </p>
-
 <p>
-  <strong>Sourceaddress:</strong>
+  <strong>Dir. Origen:</strong>
   <%= @order.sourceaddress %>
 </p>
-
 <p>
-  <strong>Servicehour:</strong>
+  <strong>Dir. Destino:</strong>
+  <%= @order.targetaddress %>
+</p>
+<p>
+  <strong>Fecha:</strong>
+  <%= @order.servicedate %>
+</p>
+<p>
+  <strong>Hora:</strong>
   <%= @order.servicehour %>
 </p>
 
 <p>
-  <strong>Targetaddress:</strong>
-  <%= @order.targetaddress %>
-</p>
-
-<p>
-  <strong>Rate:</strong>
+  <strong>Precio:</strong>
   <%= @order.rate %>
 </p>
 
 <p>
-  <strong>Servicedate:</strong>
-  <%= @order.servicedate %>
-</p>
-
-<p>
-  <strong>Passengernumber:</strong>
+  <strong>Nro. Pasajeros:</strong>
   <%= @order.passengernumber %>
 </p>
 
 <p>
-  <strong>Vehicle:</strong>
-  <%= @order.vehicle %>
+  <strong>Vehículo:</strong>
+  <%= @order.vehicle.order_vehiculo %>
 </p>
 
-<p>
-  <strong>Paymenttype:</strong>
-  <%= @order.paymenttype %>
-</p>
-
-<p>
-  <strong>Registrationdate:</strong>
-  <%= @order.registrationdate %>
-</p>
-
-<p>
-  <strong>Registrationhour:</strong>
-  <%= @order.registrationhour %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @order.rating %>
-</p>
-
-<p>
-  <strong>Commentservice:</strong>
-  <%= @order.commentservice %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @order.status %>
-</p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Editar', edit_order_path(@order), {:class => "a_sistema"} %> |
+<%= link_to 'Retornar', orders_path, {:class => "a_sistema"} %>
