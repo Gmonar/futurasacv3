@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
-  layout 'plantilla_sistema'
+  #layout 'plantilla_sistema'
+  layout 'plantilla'
   
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 

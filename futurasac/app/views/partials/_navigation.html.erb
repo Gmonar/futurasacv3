@@ -7,7 +7,7 @@
 						<li><%= link_to 'Inicio', root_path %></li>
 						<li><%= link_to 'Vehículos', car_path %></li>
 						<li><%= link_to 'Servicios', service_path %></li>
-						<li><%= link_to 'Reservar', reservation_path %></li>
+						<li><%= link_to 'Reservar', new_order_path %></li>
 						<% if user_signed_in? %>
 							<li><%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %></li>
 						<% else %>
