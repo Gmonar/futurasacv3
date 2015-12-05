@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user %>
+</p>
+
+<p>
+  <strong>Sourceaddress:</strong>
+  <%= @order.sourceaddress %>
+</p>
+
+<p>
+  <strong>Servicehour:</strong>
+  <%= @order.servicehour %>
+</p>
+
+<p>
+  <strong>Targetaddress:</strong>
+  <%= @order.targetaddress %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @order.rate %>
+</p>
+
+<p>
+  <strong>Servicedate:</strong>
+  <%= @order.servicedate %>
+</p>
+
+<p>
+  <strong>Passengernumber:</strong>
+  <%= @order.passengernumber %>
+</p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @order.vehicle %>
+</p>
+
+<p>
+  <strong>Paymenttype:</strong>
+  <%= @order.paymenttype %>
+</p>
+
+<p>
+  <strong>Registrationdate:</strong>
+  <%= @order.registrationdate %>
+</p>
+
+<p>
+  <strong>Registrationhour:</strong>
+  <%= @order.registrationhour %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @order.rating %>
+</p>
+
+<p>
+  <strong>Commentservice:</strong>
+  <%= @order.commentservice %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

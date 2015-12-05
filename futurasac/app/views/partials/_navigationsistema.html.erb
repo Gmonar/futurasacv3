@@ -1,0 +1,23 @@
+<div>
+	<nav>
+		<ul class="nav_ul">
+			<li class="nav_ul_li"><%= link_to 'Servicios', orders_path, {:class => "nav_ul_li_a"} %></li>
+			<li class="nav_ul_li"><%= link_to 'Tarifas', rates_path, {:class => "nav_ul_li_a"} %></li>
+			<li class="nav_ul_li"><%= link_to 'Distritos', districts_path, {:class => "nav_ul_li_a"} %></li>
+			<li class="nav_ul_li"><%= link_to 'Choferes', drivers_path, {:class => "nav_ul_li_a"} %></li>
+			<li class="nav_ul_li"><%= link_to 'Vehiculos', vehicles_path, {:class => "nav_ul_li_a"} %></li>
+			<% if user_signed_in? %>
+			    <li class="nav_ul_li"><%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %></li>
+			<% else %>
+			    <li class="nav_ul_li"><%= link_to 'Iniciar Sesión', new_user_session_path, {:class => "nav_ul_li_a"} %></li>
+			    <li class="nav_ul_li"><%= link_to 'Crear Cuenta', new_user_registration_path, {:class => "nav_ul_li_a"} %></li>
+			<% end %>
+		</ul>
+	</nav>
+				<% if user_signed_in? %>
+					<div style="float: right; color: #00008B;">Bienvenido <%= current_user.name %>&nbsp&nbsp&nbsp</div>
+				<% else %>
+				    <div></div>
+				<% end %>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,16 @@
+  <br>
+<br>
+<p id="notice"><%= notice %></p>
+
+<p class="label_sistema">
+  <strong>Descripción:</strong>
+  <%= @district.description %>
+</p>
+
+<p class="label_sistema">
+  <strong>Estado:</strong>
+  <%= @district.status %>
+</p>
+
+<%= link_to 'Editar', edit_district_path(@district), {:class => "a_sistema"} %> |
+<%= link_to 'Retornar', districts_path, {:class => "a_sistema"} %>

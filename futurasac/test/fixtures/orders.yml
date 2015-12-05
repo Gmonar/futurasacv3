@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  sourceaddress: MyString
+  servicehour: 2015-12-05 04:51:10
+  targetaddress: MyString
+  rate_id: 
+  servicedate: 2015-12-05
+  passengernumber: 1
+  vehicle_id: 
+  paymenttype: MyString
+  registrationdate: 2015-12-05
+  registrationhour: 2015-12-05 04:51:10
+  rating: MyString
+  commentservice: MyText
+  status: MyString
+
+two:
+  user_id: 
+  sourceaddress: MyString
+  servicehour: 2015-12-05 04:51:10
+  targetaddress: MyString
+  rate_id: 
+  servicedate: 2015-12-05
+  passengernumber: 1
+  vehicle_id: 
+  paymenttype: MyString
+  registrationdate: 2015-12-05
+  registrationhour: 2015-12-05 04:51:10
+  rating: MyString
+  commentservice: MyText
+  status: MyString

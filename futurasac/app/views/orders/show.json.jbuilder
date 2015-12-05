@@ -1,0 +1,1 @@
+json.extract! @order, :id, :user_id, :sourceaddress, :servicehour, :targetaddress, :rate_id, :servicedate, :passengernumber, :vehicle_id, :paymenttype, :registrationdate, :registrationhour, :rating, :commentservice, :status, :created_at, :updated_at

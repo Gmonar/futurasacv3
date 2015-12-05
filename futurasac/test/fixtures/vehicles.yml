@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  color: MyString
+  plaque: MyString
+  brand: MyString
+  category: MyString
+  status: false
+  driver_id: 
+
+two:
+  color: MyString
+  plaque: MyString
+  brand: MyString
+  category: MyString
+  status: false
+  driver_id: 

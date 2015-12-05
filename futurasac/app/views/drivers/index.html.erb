@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<h3 class="h3_sistema">Listado de Choferes</h3>
+<table id="t01" style="width:40%;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>DNI</th>
+      <th>Licencia</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drivers.each do |driver| %>
+      <tr>
+        <td><%= driver.name %></td>
+        <td><%= driver.identitydocument %></td>
+        <td><%= driver.license %></td>
+        <td><%= driver.status %></td>
+        <td><%= link_to 'Visualizar', driver %></td>
+        <td><%= link_to 'Editar', edit_driver_path(driver) %></td>
+        <td><%= link_to 'Eliminar', driver, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Chofer', new_driver_path, {:class => "a_sistema"} %>

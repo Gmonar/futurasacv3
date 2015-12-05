@@ -1,0 +1,48 @@
+<br>
+<div>
+  <div style="margin: 0 auto; text-align: center;">
+    <h3 style="color: #00008B; padding: 0px; height: 5px;">Registrarse</h3>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="field">
+        <%= f.label :name, "Nombre", {:style => "color: #00008B;"} %><br />
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :lastname, "Apellidos", {:style => "color: #00008B;"} %><br />
+        <%= f.text_field :lastname %>
+      </div>
+      <div class="field">
+        <%= f.label :identitydocument, "DNI", {:style => "color: #00008B;"} %><br />
+        <%= f.text_field :identitydocument %>
+      </div>
+      <div class="field">
+        <%= f.label :birthdate, "Fecha Nacimiento", {:style => "color: #00008B;"} %><br />
+        <%= f.date_select(:birthdate, :start_year => Date.current.year, :end_year => 1920, prompt: { day: 'Día', month: 'Mes', year: 'Año' }, :order => [:day, :month, :year], :use_month_names => ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre','Diciembre'] ) %>
+      </div>
+      <div class="field">
+        <%= f.label :email, "Correo Electrónico", {:style => "color: #00008B;"} %><br />
+        <%= f.email_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password, "Contraseña", {:style => "color: #00008B;"} %>
+        <% if @minimum_password_length %>
+          <em style="color: #00008B;">(<%= @minimum_password_length %> caracteres mínimos)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+      <div class="field">
+        <%= f.label :password_confirmation, "Confirmar contraseña", {:style => "color: #00008B;"} %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+      <br>
+      <div class="actions">
+        <%= f.submit "Grabar" %>
+      </div>
+    <% end %>
+    <br>
+    <%= render "devise/shared/links" %>
+  </div>
+  <br>
+  <div class="clear"></div>
+</div>

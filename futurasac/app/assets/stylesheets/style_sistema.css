@@ -1,0 +1,190 @@
+.body_sistema {
+    width: 960px;
+    margin: auto;
+    background: transparent;
+}
+.contenedor_sistema {
+    background: transparent;
+    min-height: 100%;
+    position: relative;
+}
+.header_sistema {
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #dcdcdc;
+}
+.cuerpo_sistema {
+    padding-bottom:610px;
+}
+.ladoizquierdo {
+    background-color: #ffff00;
+	/*para Firefox*/
+	-moz-border-radius: 5px;
+	/*para Safari y Chrome*/
+	-webkit-border-radius: 5px;
+	/*para Opera IE*/
+    border-radius: 5px;
+    float: left;
+    width: 17%;
+    display:block;
+    height: 550px;
+    padding-top: 20px;
+}
+.ladoderecho {
+    background-color: #FFD700;
+	/*para Firefox*/
+	-moz-border-radius: 5px;
+	/*para Safari y Chrome*/
+	-webkit-border-radius: 5px;
+	/*para Opera IE*/
+    border-radius: 5px;
+    float: right;
+    width: 80%;
+    display: block;
+    height: 550px;
+    padding-top: 0px;
+    padding-left: 30px;
+}
+.footer_sistema {
+    background-color: #4a4a4a;
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+}
+.divmenu_sistema {
+    position: relative;
+    padding: 0px 0 0 0;
+}
+.nav_ul {
+    margin-top: 0px;
+    margin-left: 27px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+.nav_ul_li {
+    float: left;
+    list-style: none;
+    margin: 1px 10px 10px 0px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #00008B;
+    width: 135px;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 25px;
+    color: #FFFFFF;
+}
+.nav_ul_li_a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.nav_ul_li_a:hover {
+    color: #00FF00;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.h1_sistema {
+    color: #00008B;
+}
+.h2_sistema {
+    color: #00008B;
+}
+.h3_sistema {
+    color: #00008B;
+}
+.h4_sistema {
+    color: #00008B;
+}
+.h5_sistema {
+    color: #00008B;
+}
+.h6_sistema {
+    color: #00008B;
+}
+.a_sistema{
+    color: #FFFFFF;
+    background: #00008B;
+    border-bottom: 1px solid;
+    font-weight: bold;
+    padding: 10px;
+}
+.a_sistema:hover{
+    color: #00FF00;
+    background: #00008B;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    padding: 5px;
+    text-align: center;
+}
+td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th	{
+    background-color: black;
+    color: #FFFFFF;
+}
+.st1_sistema {
+    padding-top: 40px;
+    color: #e2e2e2;
+}
+.input_text_sistema {
+    background: #fff;
+    border: 1px solid #799839;
+	/*para Firefox*/
+	-moz-border-radius: 5px;
+	/*para Safari y Chrome*/
+	-webkit-border-radius: 5px;
+	/*para Opera IE*/
+    border-radius: 5px;
+    padding: 0 4px;
+    height: 20px;
+}
+.label_sistema {
+    color: #00008B;
+}
+.input_bottom_sistema {
+    color: #FFFFFF;
+    background: #00008B;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+}
+.input_bottom_sistema:hover{
+    color: #00FF00;
+    background: #00008B;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    outline: none;
+}
