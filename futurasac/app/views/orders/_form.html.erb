@@ -12,62 +12,38 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.label :sourceaddress, 'Dir. Origen', {:class => "label_sistema"} %><br>
+    <%= f.text_field :sourceaddress, {:class => "input_text_sistema"} %>
   </div>
   <div class="field">
-    <%= f.label :sourceaddress %><br>
-    <%= f.text_field :sourceaddress %>
+    <%= f.label :targetaddress, 'Dir. Destino', {:class => "label_sistema"} %><br>
+    <%= f.text_field :targetaddress, {:class => "input_text_sistema"} %>
   </div>
   <div class="field">
-    <%= f.label :servicehour %><br>
-    <%= f.datetime_select :servicehour %>
+    <%= f.label :origin_district, 'Dist. Origen', {:class => "label_sistema"} %><br>
+    <%= f.collection_select :origin_district, District.all, :id,  :description %>
   </div>
   <div class="field">
-    <%= f.label :targetaddress %><br>
-    <%= f.text_field :targetaddress %>
+    <%= f.label :servicedate, 'Fecha', {:class => "label_sistema"} %><br>
+    <%= f.date_select :servicedate, {:class => "input_text_sistema"} %>
   </div>
   <div class="field">
-    <%= f.label :rate_id %><br>
-    <%= f.text_field :rate_id %>
+    <%= f.label :destiny_district, 'Dist. Destino', {:class => "label_sistema"} %><br>
+    <%= f.collection_select :destiny_district, District.all, :id,  :description %>
   </div>
   <div class="field">
-    <%= f.label :servicedate %><br>
-    <%= f.date_select :servicedate %>
+    <%= f.label :servicehour, 'Hora', {:class => "label_sistema"} %><br>
+    <%= f.datetime_select :servicehour, {:class => "input_text_sistema"} %>
   </div>
   <div class="field">
-    <%= f.label :passengernumber %><br>
-    <%= f.number_field :passengernumber %>
+    <%= f.label :passengernumber, 'Nro. Pasajeros', {:class => "label_sistema"} %><br>
+    <%= f.number_field :passengernumber, {:class => "input_text_sistema"} %>
   </div>
   <div class="field">
-    <%= f.label :vehicle_id %><br>
-    <%= f.text_field :vehicle_id %>
-  </div>
-  <div class="field">
-    <%= f.label :paymenttype %><br>
-    <%= f.text_field :paymenttype %>
-  </div>
-  <div class="field">
-    <%= f.label :registrationdate %><br>
-    <%= f.date_select :registrationdate %>
-  </div>
-  <div class="field">
-    <%= f.label :registrationhour %><br>
-    <%= f.datetime_select :registrationhour %>
-  </div>
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
-  </div>
-  <div class="field">
-    <%= f.label :commentservice %><br>
-    <%= f.text_area :commentservice %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.label :vehicle_id, 'Vehículo', {:class => "label_sistema"} %><br>
+    <%= f.collection_select :vehicle_id, Vehicle.all, :id,  :order_vehiculo %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit'  Grabar  ', {:class => "input_bottom_sistema"} %>
   </div>
 <% end %>

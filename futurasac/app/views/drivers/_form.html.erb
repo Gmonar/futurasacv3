@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Nombre', {:class => "label_sistema"}  %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :identitydocument %><br>
+    <%= f.label :identitydocument, 'DNI', {:class => "label_sistema"}  %><br>
     <%= f.text_field :identitydocument %>
   </div>
   <div class="field">
-    <%= f.label :license %><br>
+    <%= f.label :license, 'Nro. Licencia', {:class => "label_sistema"}  %><br>
     <%= f.text_field :license %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
+    <%= f.label :status, 'Estado', {:class => "label_sistema"}  %><br>
     <%= f.check_box :status %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '  Grabar  ', {:class => "input_bottom_sistema"} %>
   </div>
 <% end %>

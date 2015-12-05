@@ -1,24 +1,25 @@
+  <br>
+<br>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @rate.price %>
-</p>
-
-<p>
-  <strong>District start:</strong>
+  <strong>Distrito Inicio:</strong>
   <%= @rate.district_start %>
 </p>
 
 <p>
-  <strong>District end:</strong>
+  <strong>Distrito Final:</strong>
   <%= @rate.district_end %>
+</p>
+<p>
+  <strong>Precio:</strong>
+  <%= @rate.price %>
 </p>
 
 <p>
-  <strong>Status:</strong>
+  <strong>Estado:</strong>
   <%= @rate.status %>
 </p>
 
-<%= link_to 'Edit', edit_rate_path(@rate) %> |
-<%= link_to 'Back', rates_path %>
+<%= link_to 'Editar', edit_rate_path(@rate), {:class => "a_sistema"} %> |
+<%= link_to 'Retornar', rates_path, {:class => "a_sistema"} %>

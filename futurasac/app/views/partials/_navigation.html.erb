@@ -27,7 +27,7 @@
 				<%= image_tag("logo.png", :alt => "") %>
 			</h1>
 			<% if user_signed_in? %>
-				<div style="float: right; color: #00008B;">Bienvenido <%= current_user.name %></div>
+				<div style="float: right; color: #00008B;">Bienvenido(a) <%= current_user.name %></div>
 			<% else %>
 			    <div></div>
 			<% end %>

@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @driver.name %>
 </p>
 
 <p>
-  <strong>Identitydocument:</strong>
+  <strong>DNI:</strong>
   <%= @driver.identitydocument %>
 </p>
 
 <p>
-  <strong>License:</strong>
+  <strong>Nro Licencia:</strong>
   <%= @driver.license %>
 </p>
 
 <p>
-  <strong>Status:</strong>
+  <strong>Estado:</strong>
   <%= @driver.status %>
 </p>
 
-<%= link_to 'Edit', edit_driver_path(@driver) %> |
-<%= link_to 'Back', drivers_path %>
+<%= link_to 'Editar', edit_driver_path(@driver), {:class => "a_sistema"}  %> |
+<%= link_to 'Retornar', drivers_path, {:class => "a_sistema"}  %>

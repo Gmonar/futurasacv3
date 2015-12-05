@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Vehicles</h1>
-
-<table>
+<h3 class="h3_sistema">Listado de Vehículos</h3>
+<table id="t01" style="width:90%;">
   <thead>
     <tr>
+      <th>Placa</th>
+      <th>Marca</th>
       <th>Color</th>
-      <th>Plaque</th>
-      <th>Brand</th>
-      <th>Category</th>
-      <th>Status</th>
-      <th>Driver</th>
+      <th>Categoría</th>
+      <th>Chofer</th>
+      <th>Estado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,15 +17,15 @@
   <tbody>
     <% @vehicles.each do |vehicle| %>
       <tr>
-        <td><%= vehicle.color %></td>
         <td><%= vehicle.plaque %></td>
         <td><%= vehicle.brand %></td>
+        <td><%= vehicle.color %></td>
         <td><%= vehicle.category %></td>
+        <td><%= vehicle.driver.name %></td>
         <td><%= vehicle.status %></td>
-        <td><%= vehicle.driver %></td>
-        <td><%= link_to 'Show', vehicle %></td>
-        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
-        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', vehicle %></td>
+        <td><%= link_to 'Editar', edit_vehicle_path(vehicle) %></td>
+        <td><%= link_to 'Eliminar', vehicle, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Vehicle', new_vehicle_path %>
+<%= link_to 'Nuevo Vehículo', new_vehicle_path, {:class => "a_sistema"}  %>

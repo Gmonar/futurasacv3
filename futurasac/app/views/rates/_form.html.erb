@@ -10,24 +10,24 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :district_start, 'Distrito Origen', {:class => "label_sistema"} %><br>
+    <%= f.collection_select(:district_start, District.all, :id,  :description) %>
+  </div>
+  <div class="field">
+    <%= f.label :district_end, 'Distrito Destino', {:class => "label_sistema"} %><br>
+    <%= f.collection_select(:district_end, District.all, :id,  :description) %>
+  </div>
+  <div class="field">
+    <%= f.label :price, 'Precio', {:class => "label_sistema"} %><br>
+    <%= f.number_field :price, {:class => "input_text_sistema"} %>
+  </div>
 
   <div class="field">
-    <%= f.label :price %><br>
-    <%= f.number_field :price %>
-  </div>
-  <div class="field">
-    <%= f.label :district_start %><br>
-    <%= f.text_field :district_start %>
-  </div>
-  <div class="field">
-    <%= f.label :district_end %><br>
-    <%= f.text_field :district_end %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.check_box :status %>
+    <%= f.label :status, 'Estado', {:class => "label_sistema"} %><br>
+    <%= f.check_box :status, {:class => "input_text_sistema"} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '  Grabar  ', {:class => "input_bottom_sistema"} %>
   </div>
 <% end %>

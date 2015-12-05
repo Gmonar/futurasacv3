@@ -1,4 +1,5 @@
 class DriversController < ApplicationController
+  layout 'plantilla_sistema'
   before_action :set_driver, only: [:show, :edit, :update, :destroy]
 
   # GET /drivers
@@ -28,7 +29,7 @@ class DriversController < ApplicationController
 
     respond_to do |format|
       if @driver.save
-        format.html { redirect_to @driver, notice: 'Driver was successfully created.' }
+        format.html { redirect_to @driver, notice: 'Chofer creado correctamente' }
         format.json { render :show, status: :created, location: @driver }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class DriversController < ApplicationController
   def update
     respond_to do |format|
       if @driver.update(driver_params)
-        format.html { redirect_to @driver, notice: 'Driver was successfully updated.' }
+        format.html { redirect_to @driver, notice: 'Chofer actualizado correctamente' }
         format.json { render :show, status: :ok, location: @driver }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class DriversController < ApplicationController
   def destroy
     @driver.destroy
     respond_to do |format|
-      format.html { redirect_to drivers_url, notice: 'Driver was successfully destroyed.' }
+      format.html { redirect_to drivers_url, notice: 'Chofer eliminado correctamente' }
       format.json { head :no_content }
     end
   end

@@ -1,24 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Orders</h1>
+<h3 class="h3_sistema">Reservas</h3>
 
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Sourceaddress</th>
-      <th>Servicehour</th>
-      <th>Targetaddress</th>
+      <th>Pasajero</th>
+      <th>Dir. Origen</th>
+      
+      <th>Dir. Destino</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      
       <th>Rate</th>
-      <th>Servicedate</th>
-      <th>Passengernumber</th>
-      <th>Vehicle</th>
-      <th>Paymenttype</th>
-      <th>Registrationdate</th>
-      <th>Registrationhour</th>
-      <th>Rating</th>
-      <th>Commentservice</th>
-      <th>Status</th>
+      
+      <th>Nro. Pasajeros</th>
+      <th>Vehículo</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -28,21 +25,16 @@
       <tr>
         <td><%= order.user %></td>
         <td><%= order.sourceaddress %></td>
-        <td><%= order.servicehour %></td>
         <td><%= order.targetaddress %></td>
-        <td><%= order.rate %></td>
         <td><%= order.servicedate %></td>
+        <td><%= order.servicehour %></td>
+        <td><%= order.rate %></td>
         <td><%= order.passengernumber %></td>
         <td><%= order.vehicle %></td>
-        <td><%= order.paymenttype %></td>
-        <td><%= order.registrationdate %></td>
-        <td><%= order.registrationhour %></td>
-        <td><%= order.rating %></td>
-        <td><%= order.commentservice %></td>
-        <td><%= order.status %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', order %></td>
+        <td><%= link_to 'Editar', edit_order_path(order) %></td>
+        <td><%= link_to 'Eliminar', order, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>        
+        
       </tr>
     <% end %>
   </tbody>

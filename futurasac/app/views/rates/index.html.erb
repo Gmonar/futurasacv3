@@ -1,14 +1,12 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Rates</h1>
-
-<table>
+<h3 class="h3_sistema">Listado de Tarifas</h3>
+<table id="t01" style="width:80%;">
   <thead>
     <tr>
-      <th>Price</th>
-      <th>District start</th>
-      <th>District end</th>
-      <th>Status</th>
+      <th>Distrito Origen</th>
+      <th>Distrito Destino</th>
+      <th>Precio</th>
+      <th>Estado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,18 +14,18 @@
   <tbody>
     <% @rates.each do |rate| %>
       <tr>
-        <td><%= rate.price %></td>
         <td><%= rate.district_start %></td>
         <td><%= rate.district_end %></td>
+        <td><%= rate.price %></td>
         <td><%= rate.status %></td>
-        <td><%= link_to 'Show', rate %></td>
-        <td><%= link_to 'Edit', edit_rate_path(rate) %></td>
-        <td><%= link_to 'Destroy', rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', rate %></td>
+        <td><%= link_to 'Editar', edit_rate_path(rate) %></td>
+        <td><%= link_to 'Eliminar', rate, method: :delete, data: { confirm: 'Esta seguro de eliminar?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
-<%= link_to 'New Rate', new_rate_path %>
+<%= link_to 'Nueva Tarifa', new_rate_path, {:class => "a_sistema"} %>

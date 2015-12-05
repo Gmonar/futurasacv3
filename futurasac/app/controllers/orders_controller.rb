@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  layout 'plantilla_sistema'
+  
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders

@@ -10,32 +10,34 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= f.label :plaque, 'Nro. Placa', {:class => "label_sistema"} %><br>
+    <%= f.text_field :plaque, {:class => "input_text_sistema"} %>
+  </div>
+  <div class="field">
+    <%= f.label :brand, 'Marca', {:class => "label_sistema"} %><br>
+    <%= f.text_field :brand, {:class => "input_text_sistema"} %>
+  </div>
+  <div class="field">
+    <%= f.label :color, 'Color', {:class => "label_sistema"} %><br>
+    <%= f.text_field :color, {:class => "input_text_sistema"} %>
+  </div>
 
   <div class="field">
-    <%= f.label :color %><br>
-    <%= f.text_field :color %>
+    <%= f.label :category, 'Categoría', {:class => "label_sistema"} %><br>
+    <%= f.text_field :category, {:class => "input_text_sistema"} %>
   </div>
   <div class="field">
-    <%= f.label :plaque %><br>
-    <%= f.text_field :plaque %>
+    <%= f.label :driver_id, 'Chofer', {:class => "label_sistema"} %><br>
+    <%= f.collection_select(:driver_id, Driver.all, :id,  :name) %>
   </div>
   <div class="field">
-    <%= f.label :brand %><br>
-    <%= f.text_field :brand %>
+    <%= f.label :status, 'Estado', {:class => "label_sistema"} %><br>
+    <%= f.check_box :status, {:class => "input_text_sistema"} %>
   </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
-  </div>
-  <div class="field">
-    <%= f.label :status %><br>
-    <%= f.check_box :status %>
-  </div>
-  <div class="field">
-    <%= f.label :driver_id %><br>
-    <%= f.text_field :driver_id %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '  Grabar  ', {:class => "input_bottom_sistema"} %>
   </div>
 <% end %>

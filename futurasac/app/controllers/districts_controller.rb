@@ -2,8 +2,8 @@ class DistrictsController < ApplicationController
   layout 'plantilla_sistema'
   
   before_action :set_district, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:show, :edit, :update]
-  before_action :authenticate_admin!, only: [:destroy]
+  #before_action :authenticate_user!, only: [:show, :edit, :update]
+  #before_action :authenticate_admin!, only: [:destroy]
 
   # GET /districts
   # GET /districts.json

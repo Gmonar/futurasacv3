@@ -1,34 +1,34 @@
+<br>
+<br>
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Placa:</strong>
+  <%= @vehicle.plaque %>
+</p>
+<p>
+  <strong>Marca</strong>
+  <%= @vehicle.brand %>
+</p>
 <p>
   <strong>Color:</strong>
   <%= @vehicle.color %>
 </p>
 
 <p>
-  <strong>Plaque:</strong>
-  <%= @vehicle.plaque %>
-</p>
-
-<p>
-  <strong>Brand:</strong>
-  <%= @vehicle.brand %>
-</p>
-
-<p>
-  <strong>Category:</strong>
+  <strong>Categoría:</strong>
   <%= @vehicle.category %>
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @vehicle.status %>
+  <strong>Chofer:</strong>
+  <%= @vehicle.driver.name %>
 </p>
 
 <p>
-  <strong>Driver:</strong>
-  <%= @vehicle.driver %>
+  <strong>Estado:</strong>
+  <%= @vehicle.status %>
 </p>
 
-<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', vehicles_path %>
+<%= link_to 'Editar', edit_vehicle_path(@vehicle), {:class => "a_sistema"} %> |
+<%= link_to 'Retornar', vehicles_path, {:class => "a_sistema"} %>
